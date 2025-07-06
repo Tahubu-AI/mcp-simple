@@ -66,6 +66,7 @@ Create or edit your `claude_desktop_config.json` file (usually located in your u
 ```
 
 **Important Notes:**
+
 - Replace `C:\\ABSOLUTE\\PATH\\TO\\mcp-simple-server` with the actual absolute path to your project directory
 - Replace `your-api-key-here` with your actual NASA API key
 - The `env` section allows you to set environment variables specifically for this MCP server
