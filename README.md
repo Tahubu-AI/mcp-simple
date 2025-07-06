@@ -13,11 +13,14 @@ This solution demonstrates a simple implementation of MCP (Model Context Protoco
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────┐    HTTP     ┌─────────────────┐    HTTP    ┌─────────────────┐
-│   MCP Client    │ ──────────► │   MCP Server    │ ──────────► │   NASA API      │
-│  (Claude AI)    │  (streaming)│ (Mars Photos)   │             │ (Mars Rovers)   │
-└─────────────────┘             └─────────────────┘             └─────────────────┘
+```mermaid
+graph LR
+    A[MCP Client<br/>Claude AI] -->|HTTP Streaming| B[MCP Server<br/>Mars Photos]
+    B -->|HTTP| C[NASA API<br/>Mars Rovers]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
 ```
 
 ### Transport Options
