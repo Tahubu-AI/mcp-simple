@@ -39,6 +39,7 @@ If no API key is provided, the server will use the `DEMO_KEY` which has limited 
 
 - `get-rovers`: Returns a list of all available Mars rovers
 - `get-rover-photo`: Returns photos for a specific rover and date
+- `get-current-date`: Returns the current date in YYYY-M-D format for reference when requesting rover photos
 
 ## Testing with Claude Desktop
 
@@ -116,6 +117,15 @@ Add the following to your VS Code settings (`settings.json`):
 Use the VS Code command palette to interact with the MCP tools or use the integrated chat interface.
 
 When using the Copilot chat interface, switch to **Agent** mode. You may have best results selecting a Claude model instead of one of the default GPT-4x models. The OpenAI models sometimes avoid using tools, even when you explicitly ask them to.
+
+## Using the MCP Inspector tool
+
+You can use the web-based MCP Inspector tool to connect to your server, list tools, and execute the tools to see their outputs:
+
+```bash
+cd mcp-simple-server
+npx @modelcontextprotocol/inspector dotnet run
+```
 
 ## Running the Server Locally
 
