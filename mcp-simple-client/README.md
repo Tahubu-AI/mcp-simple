@@ -63,6 +63,7 @@ When you start the application, you'll see a configuration menu with these optio
 ## Usage
 
 ### Basic Commands
+
 - **Type your question** and press Enter to chat with Claude
 - **Type `menu`** to change configuration settings anytime
 - **Type `exit`** to quit the application
@@ -72,15 +73,18 @@ When you start the application, you'll see a configuration menu with these optio
 Here are some example questions you can try:
 
 #### Rover Information
+
 - **"Which rovers are available?"** - Lists all available Mars rovers
 - **"What tools are available?"** - Shows available MCP tools
 
 #### Photo Queries
+
 - **"Show me Curiosity photos from July 2nd"** - Gets photos from a specific date
 - **"Show me one of the NAV_RIGHT_B photos"** - Gets photos from a specific camera
 - **"I would like to know more about this particular image"** - Gets detailed information about a photo
 
 #### Date-Related Queries (demonstrates system prompt)
+
 - **"What photos were taken today?"** - Uses current date
 - **"Show me photos from yesterday"** - Uses relative date
 - **"Get photos from last week"** - Uses relative date range
@@ -88,10 +92,12 @@ Here are some example questions you can try:
 ## Configuration Modes Explained
 
 ### Conversation History
+
 - **Enabled**: The AI remembers previous messages and can reference them
 - **Disabled**: Each query is independent, no context from previous messages
 
 ### System Prompt
+
 - **Enabled**: AI automatically uses the `get-current-date` tool for date-related questions
 - **Disabled**: AI won't automatically use date tools, may give less accurate date responses
 
@@ -115,6 +121,11 @@ Here are some example questions you can try:
 6. Notice how the AI references the previous conversation
 7. Switch to **Option 3** (History Disabled + System Prompt Enabled)
 8. Ask the same questions and notice the lack of context
+
+### Scenario 3: HTTP streaming Response Demonstration
+
+1. Run the client in **Debug** mode and set a breakpoint on line 139 of Program.cs (`fullResponse += message;`)
+2. Ask any question and observe the `message.Text` or `fullResponse` values to see the partial responses returning from the MCP server
 
 ## Error Handling
 
